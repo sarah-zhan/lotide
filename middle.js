@@ -17,11 +17,32 @@ const assertArrayEqual = function (array1, array2) {
   }
 };
 
-const middle = function () {
+const middle = function (array) {
+  let index = Math.floor(array.length / 2); //
+  let middleArray = [];
   //1 or 2 elements arrray return []
-
+  if (array.length < 3) {
+    return [];
+  }
   //odd number
-
+  else if (array.length % 2 !== 0) {
+    middleArray.push(array[index]);
+   
+  }
   //even number
-  
+  else if (array.length % 2 === 0) {
+    middleArray.push(array[index]);
+    //console.log(middleArray)
+    middleArray.push(array[index - 1]);
+    //console.log(middleArray)
+
+  }
+  return middleArray
 }
+
+console.log(middle([1, 2, 3, 4, 5])) // => [3]
+console.log(middle([1, 2, 3, 4])) // => [2, 3]
+console.log(middle([1, 2, 3])) // => [2]
+console.log(middle([1, 2, 3, 4, 5, 6])) // => [3, 4]
+console.log(middle([1, 2]));
+console.log(middle([9]));
