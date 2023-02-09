@@ -20,16 +20,22 @@ const eqArrays = function(array1, array2) {
 
 const letterPositions = function(sentence) {
   const results = {};
+  let array = []; //need to create array?
   // split the sentence
   let sentenceSplit = sentence.replace(/\s+/g, '').split('');
   //loop the sentenceSplit
-  for (let letter of sentenceSplit) {
+  for (let i = 0; i < sentenceSplit.length; i++) {
+    //check whether letter in results
     //get the index of letter
     //add them to the key as the value
-    results[letter] = sentenceSplit.indexOf(letter);
+    if (!results[sentenceSplit[i]]) {
+      results[sentenceSplit[i]] = [i];
+    } else {
+       results[sentenceSplit[i]].push(i);
+    }
   }
   return results;
 };
 
-//console.log(letterPositions("hello jane"));
-assertArrayEqual(letterPositions("hello").e, [1]);
+console.log(letterPositions("hello jane"));
+assertArrayEqual(letterPositions("hello").l, [1]);
