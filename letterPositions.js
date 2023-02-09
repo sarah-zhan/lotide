@@ -20,7 +20,6 @@ const eqArrays = function(array1, array2) {
 
 const letterPositions = function(sentence) {
   const results = {};
-  let array = []; //need to create array?
   // split the sentence
   let sentenceSplit = sentence.replace(/\s+/g, '').split('');
   //loop the sentenceSplit
@@ -31,7 +30,8 @@ const letterPositions = function(sentence) {
     if (!results[sentenceSplit[i]]) {
       results[sentenceSplit[i]] = [i];
     } else {
-       results[sentenceSplit[i]].push(i);
+      results[sentenceSplit[i]].push(i);
+      
     }
   }
   return results;
