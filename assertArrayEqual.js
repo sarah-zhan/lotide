@@ -4,7 +4,6 @@
 //   } else {
 //     console.log(`😔 😔 😔 Assertion Failed: ${actual} !== ${expected}`);
 //   }
-
 // };
 
 const eqArrays = function(array1, array2) {
