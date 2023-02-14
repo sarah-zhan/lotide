@@ -1,5 +1,12 @@
-const assertEqual = require('../assertEqual');
+const chai = require('chai').assert;
+const { assert } = require('chai');
 const assertArrayEqual = require('../assertArrayEqual');
 
-assertArrayEqual([1, 2, 3], [3, 2, 1]);
-assertArrayEqual([3, 2, 1], [3, 2, 1]);
+describe('#assertArrayEqual', () => {
+  it('should return they are a match when pass the same array', () => {
+    assert.strictEqual(assertArrayEqual([1, 2, 3], [1, 2, 3]), 'They are a match.');
+  });
+  it('should return not a match when pass different arrays', () => {
+    assert.strictEqual(assertArrayEqual([3, 2, 1], [1, 2, 3]), 'Not a match!');
+  });
+});

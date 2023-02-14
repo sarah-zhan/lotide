@@ -1,4 +1,4 @@
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   //loop through object1
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
@@ -17,7 +17,7 @@ const eqObjects = function (object1, object2) {
 };
 
 // FUNCTION IMPLEMENTATION
-const assertObjectsEqual = function (actual, expected) {
+const assertObjectsEqual = function(actual, expected) {
   // Implement me!
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) console.log('😀 😀 😀 They are a match');

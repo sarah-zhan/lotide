@@ -34,17 +34,17 @@ const assertArrayEqual = function(array1, array2) {
 // };
 
 
-const without = function (source, itemsToRemove) {
+const without = function(source, itemsToRemove) {
   const results = [];
 
   for (const item of source) {
     if (!itemsToRemove.includes(item)) {
-      results.push(item)
+      results.push(item);
     }
   }
 
   return results;
-}
+};
 
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"]));

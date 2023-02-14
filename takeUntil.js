@@ -1,4 +1,4 @@
-const takeUntil = function (array, callback) {
+const takeUntil = function(array, callback) {
   const newArray = [];
 
   for (let item of array) {
@@ -10,7 +10,7 @@ const takeUntil = function (array, callback) {
     newArray.push(item);
   }
   return newArray;
-} 
+};
 
 
 

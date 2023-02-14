@@ -23,7 +23,7 @@ const assertEqual = function(actual, expected) {
 //   return results;
 // };
 
-const countOnly = function (allItems, itemsToCount) {
+const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
   for (const key of allItems) {
@@ -32,7 +32,7 @@ const countOnly = function (allItems, itemsToCount) {
     }
 
     if (!results[key]) {
-      results[key] = 0; 
+      results[key] = 0;
     }
 
     //happy path
@@ -40,7 +40,7 @@ const countOnly = function (allItems, itemsToCount) {
   }
 
   return results;
-}
+};
 
 
 const firstNames = [

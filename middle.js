@@ -10,7 +10,7 @@
 // };
 
 
-const middle = function (array) {
+const middle = function(array) {
   let index = Math.floor(array.length / 2); //
   let middleArray = [];
   //1 or 2 elements arrray return []
@@ -20,8 +20,8 @@ const middle = function (array) {
     middleArray.push(array[index]);
   }
   if (array.length % 2 === 0) {
-    middleArray.push(array[index]);
     middleArray.push(array[index - 1]);
+    middleArray.push(array[index]);
   }
   return middleArray;
 };
