@@ -19,20 +19,32 @@ const assertArrayEqual = function(array1, array2) {
 
 
 
-const without = function(arr, itemsToRemove) {
-  if (!Array.isArray(arr) || !Array.isArray(itemsToRemove)) {
-    return [];
-  }
-  let output;
+// const without = function(arr, itemsToRemove) {
+//   if (!Array.isArray(arr) || !Array.isArray(itemsToRemove)) {
+//     return [];
+//   }
+//   let output;
 
-  output = arr.filter(word => {
-    if (!itemsToRemove.includes(word)) {
-      return word;
+//   output = arr.filter(word => {
+//     if (!itemsToRemove.includes(word)) {
+//       return word;
+//     }
+//   });
+//   return output;
+// };
+
+
+const without = function (source, itemsToRemove) {
+  const results = [];
+
+  for (const item of source) {
+    if (!itemsToRemove.includes(item)) {
+      results.push(item)
     }
-  });
-  return output;
-};
+  }
 
+  return results;
+}
 
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"]));

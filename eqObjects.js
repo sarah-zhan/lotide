@@ -10,8 +10,8 @@ const assertEqual = function (actual, expected) {
 // Otherwise you get back a big fat false!
 const eqObjects = function (object1, object2) {
   //loop through object1
-  keys1 = Object.keys(object1);
-  keys2 = Object.keys(object2);
+  let keys1 = Object.keys(object1);
+  let keys2 = Object.keys(object2);
 
   if (keys1.length !== keys2.length) {
     return false;
@@ -22,9 +22,9 @@ const eqObjects = function (object1, object2) {
     if (value1 !== value2) {
       return false;
     }
-  }  
-  return true;     
-}
+  }
+  return true;
+};
 
 
 const shirtObject = { color: "red", size: "medium" };

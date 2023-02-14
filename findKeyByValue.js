@@ -7,17 +7,30 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const findKeyByValue = (objestItem, word) => {
-  //loop through object value
-  for (const key of Object.keys(objestItem)) {
-    //if there is match
-    if (objestItem[key] === word) {
-      //return the key
+// const findKeyByValue = (objestItem, word) => {
+//   //loop through object value
+//   for (const key of Object.keys(objestItem)) {
+//     //if there is match
+//     if (objestItem[key] === word) {
+//       //return the key
+//       return key;
+//     }
+//   }
+//   return undefined;
+
+// };
+
+const findKeyByValue = function(obj, value) {
+  
+  //better use Object.keys(obj) to iterate the keys
+
+  for (const key in obj) {
+    const val = obj[key];
+    if (val === value) {
       return key;
     }
   }
-  return undefined;
-
+  
 };
 
 

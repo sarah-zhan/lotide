@@ -1,25 +1,17 @@
 const takeUntil = function (array, callback) {
   const newArray = [];
-  
-  // if (array.forEach(element => callback(element))) {
-  //   return element
-  // } else {
-  //   //loop through the element
-  //     array.forEach(element => newArray.push(element))  
-  // }
-
 
   for (let item of array) {
     //const result = callback(item)
     if (callback(item)) {
       return newArray;
     }
-
-
+    
     newArray.push(item);
   }
   return newArray;
 } 
+
 
 
 

@@ -1,14 +1,15 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`😀 😀 😀 Assertion Passed: ${actual} === ${expected}`);
-  } else {
+  //use if as a filter to remove the negitive concequances first
+  if (actual !== expected) {
     console.log(`😔 😔 😔 Assertion Failed: ${actual} !== ${expected}`);
+    return;
   }
   
+  //happy path
+  console.log(`😀 😀 😀 Assertion Passed: ${actual} === ${expected}`);
 };
 
-//test code
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("good", "good");
-assertEqual(10, 30);
+
+
+module.exports = assertEqual;
+
